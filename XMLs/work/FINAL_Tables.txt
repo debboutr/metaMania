@@ -1,0 +1,11 @@
+NADP (NH4, NO3, InorgNWetDep,SplusN) ***
+EnviroAtlas (fert, manure, cbnf) 
+Pesticide***
+kfact
+bfi
+landfire (vegdist, veght, vegcov, )
+Global Forest Change 2000–2013 (gain, loss, lossyr)
+GAP (gap, iucn)
+NCRDS (Ustrat - coal mine sites)
+NABD (capy of dams?)
+PRISM (precip, tmax, tmin, tmean)****

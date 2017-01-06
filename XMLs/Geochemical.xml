@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>US Environmental Protection Agency</origin>
+				<title>The StreamCat Dataset: Accumulated Attributes for NHDPlusV2 (Version 2.1) Catchments for the Conterminous United States: GeoChemPhys</title>
+				<pubinfo>
+					<publish>US EPA Office of Research &amp; Development (ORD) - National Health and Environmental Effects Research Laboratory (NHEERL) </publish>
+					<pubplace>Corvallis, OR</pubplace>
+				</pubinfo>
+				<pubdate>2015</pubdate>
+				<onlink>http://www.epa.gov/nheerl/arm/</onlink>
+				<onlink>http://edg.epa.gov</onlink>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>This dataset represents geochemical or geophysical attributes in surface or near surface geology within individual, local NHDPlusV2 catchments and upstream, contributing watersheds. Attributes of the landscape layer were calculated for every local NHDPlusV2 catchment and accumulated to provide watershed-level metrics. (See Supplementary Info for Glossary of Terms) 
+			
+			For information regarding how the Landscape layers were created see https://www.sciencebase.gov/catalog/item/53481333e4b06f6ce034aae7.
+			
+			Landscape Layers are partitioned into 4 tables based on the location of no-data cells within their rasters to correctly reflect the PctFull attributes within each table (see Data Structure and Attribute Information for a description). 
+			</abstract>
+			<purpose>These data were created in support of the US EPA’s National Aquatic Resource Survey (NARS) and Safe and Sustainable Waters Resources (SSWR) Programs. However, these watershed summaries of landscape data should have broad applicability for hydrological, geomorphic, or ecological modeling, management, and restoration. For details on EPA NARS and SSWR Programs see http://water.epa.gov/type/watersheds/monitoring/aquaticsurvey_index.cfm and http://www.epa.gov/research/progressreport/water.htm</purpose>
+			<supplinf>GeoChemPhys was split into 4 tables (GeoChemPhys1, GeoChemPhys2, GeoChemPhys3, GeoChemPhys4) based on the no data values that exist in the rasters across each of the landscape layers. (See ReadMe file)
+            
+            All code and scripts used to produce these data were written in the python or R programming languages and are freely available at ftp://newftp.epa.gov/EPADataCommons/ORD/NHDPlusLandscapeAttributes/StreamCat/Documentation/Code/ or https://github.com/USEPA/StreamCat
+            
+
+            Al2O3 - percentage of lithological aluminum oxide content in surface or near surface geology.
+			CaO - percentage of lithological calcium oxide content in surface or near surface geology.
+			Fe2O3 - percentage of lithological ferric oxide content in surface or near surface geology.
+			K2O - percentage of lithological potassium oxide content in surface or near surface geology.
+			MgO - percentage of lithological magnesium oxide content in surface or near surface geology.
+			Na2O - percentage of lithological sodium oxide content in surface or near surface geology.
+			N - percentage of lithological nitrogen content in surface or near surface geology.
+			P2O5 - percentage of lithological phosphorus pentoxide content in surface or near surface geology.
+			SiO2 - percentage of lithological silicon dioxide content in surface or near surface geology.
+			S - percentage of lithological sulfur content in surface or near surface geology.
+			HydrlCond - percentage of lithological the hydraulic conductivity (in micrometers per second) of surface or near surface geology.
+			CompStrgth - percentage of lithological the compressive strength, measured as uniaxial compressive strength (in megaPascals, MPa) of surface or near surface geology
+			
+            
+			Glossary of Terms
+			
+			Stream Segment: NHDPlusV2 line describing a section of contiguous stream or river between upstream and downstream tributaries (as depicted in USGS topographic quadrangles), except where the segment is a headwater or terminal stream .  
+			
+			Catchment (Cat):  The portion of the landscape where surface flow drains directly to an NHDPlusV2 stream segment, excluding any upstream contributions. 
+			
+			Watershed (Ws): The set of hydrologically-connected catchments, consisting of all upstream catchments that contribute flow to any local catchment. 
+			
+			COMID: Unique identifier for each stream segment, and associated catchment, in NHDPlusV2.  Watershed metrics describe entire area of all catchments that accumulate to the specific catchment based on the NHD PlusFlow table.
+
+			Riparian Buffer (Rp100): Spatial buffer of 100-m that was added to NHDPlusV2 stream network and NLCD water pixels. The buffers were used to spatially constrain calculations for some landscape metrics to within 100 meters of the riparian area.
+				
+			Landscape Layer: Any geospatial layer from which we derived statistical summaries for both local catchments and watersheds. These landscape layers were comprised of several GIS formats, including vector (points, lines, or polygons) and raster.</supplinf>
+		</descript>
+		<timeperd>
+			<current>Publication date</current>
+			<timeinfo>
+				<sngdate>
+					<caldate>20150423</caldate>
+				</sngdate>
+			</timeinfo>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-125</westbc>
+				<eastbc>-66.5</eastbc>
+				<northbc>49.5</northbc>
+				<southbc>24.5</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>ISO 19115 Topic Category</themekt>
+				<themekey>inlandWaters</themekey>
+			</theme>
+			<theme>
+				<themekt>EPA GIS Keyword Thesaurus</themekt>
+				<themekey>Ecosystem</themekey>
+				<themekey>Environment</themekey>
+				<themekey>Monitoring</themekey>
+				<themekey>Natural Resources</themekey>
+				<themekey>Surface Water</themekey>
+				<themekey>Modeling</themekey>
+			</theme>
+			<place>
+				<placekt>none</placekt>
+				<placekey>United States of America</placekey>
+				<placekey>United States</placekey>
+				<placekey>USA</placekey>
+				<placekey>Alabama</placekey>
+				<placekey>Arizona</placekey>
+				<placekey>Arkansas</placekey>
+				<placekey>California</placekey>
+				<placekey>Colorado</placekey>
+				<placekey>Connecticut</placekey>
+				<placekey>Delaware</placekey>
+				<placekey>District of Columbia</placekey>
+				<placekey>Florida</placekey>
+				<placekey>Georgia</placekey>
+				<placekey>Idaho</placekey>
+				<placekey>Illinois</placekey>
+				<placekey>Indiana</placekey>
+				<placekey>Iowa</placekey>
+				<placekey>Kansas</placekey>
+				<placekey>Kentucky</placekey>
+				<placekey>Louisiana</placekey>
+				<placekey>Maine</placekey>
+				<placekey>Maryland</placekey>
+				<placekey>Massachusetts</placekey>
+				<placekey>Michigan</placekey>
+				<placekey>Minnesota</placekey>
+				<placekey>Mississippi</placekey>
+				<placekey>Missouri</placekey>
+				<placekey>Montana</placekey>
+				<placekey>Nebraska</placekey>
+				<placekey>Nevada</placekey>
+				<placekey>New Hampshire</placekey>
+				<placekey>New Jersey</placekey>
+				<placekey>New Mexico</placekey>
+				<placekey>New York</placekey>
+				<placekey>North Carolina</placekey>
+				<placekey>North Dakota</placekey>
+				<placekey>Ohio</placekey>
+				<placekey>Oklahoma</placekey>
+				<placekey>Oregon</placekey>
+				<placekey>Pennsylvania</placekey>
+				<placekey>Rhode Island</placekey>
+				<placekey>South Carolina</placekey>
+				<placekey>South Dakota</placekey>
+				<placekey>Tennessee</placekey>
+				<placekey>Texas</placekey>
+				<placekey>Utah</placekey>
+				<placekey>Vermont</placekey>
+				<placekey>Virginia</placekey>
+				<placekey>Washington</placekey>
+				<placekey>West Virginia</placekey>
+				<placekey>Wisconsin</placekey>
+				<placekey>Wyoming</placekey>
+			</place>
+			<place>
+				<placekt>None</placekt>
+			</place>
+			<theme>
+				<themekt>User</themekt>
+			</theme>
+		</keywords>
+		<accconst>None.</accconst>
+		<useconst>None.  While EPA has used its best efforts to include complete and accurate information in the EME, EPA cannot be held responsible for errors or omissions and is not liable for any direct, indirect or consequential damages resulting from using this information. Reliance on the information contained in this system by any party cannot be used as a defense in any administrative or judicial proceeding. In such proceedings, the specific language of the relevant regulation or statute is binding. Acknowledgement of the EPA would be appreciated.</useconst>
+		<secinfo>
+			<secsys>FIPS Pub 199</secsys>
+			<secclass>public</secclass>
+			<sechandl>Standard Technical Controls</sechandl>
+		</secinfo>
+	</idinfo>
+	<dataqual>
+		<logic>Not Applicable</logic>
+		<complete>Not Applicable</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Not Applicable</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Dataset downloaded from https://www.sciencebase.gov/catalog/item/53481333e4b06f6ce034aae7. Data source, date, units and resolution were recorded in a project tracking spreadsheet and verified. 
+				</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Projection of dataset verified as USGS Albers Equal Area Conic and projected if necessary</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Performed a visual inspection of dataset for gaps, edges other anomalous features. Verified how no-data values were represented and recoded values as no-data where appropriate (for instance, if no-data locations represented by 0's or -9999, these were converted to no-data values). Data manipulation documented in Pre-Processing script (StreamCat_PreProcessing.py) </procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Ran zonal statistics python script (StreamCat.py) to calculate zonal statistics for all NHDPlusV2 catchments in each NHDPlusV2 Vector Processing Unit (VPU). Zonal statistics were perofrmed using either ZonalStatisticsAsTable, TabulateArea, or spatially joining vector point data to catchments. Each method applies to the type of landscape layer being evaluated, Continuous, Categorical, or Point. We also calculated the percent of each catchment that had coverage by a given landscape layer (i.e. was not null). These results are accumulated using the NHDPlusV2 flow table to summarize upstream catchment values and complete watershed values for the metric.</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Clean and standardize results of zonal statistics table from accumulation script / process using makeFinalTables.py. Clean up consisted of calculating mean value of metric per zone, renaming and sorting zonal statistics fields, and writing zonal results to .csv file.</procdesc>
+			</procstep>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>Landscape Layers</srccitea>
+				<srccontr>900-meter raster (grid) dataset for the conterminous United States.</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2014</begdate>
+							<enddate>present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>
+				<srccite>
+					<citeinfo>
+						<origin>USGS</origin>
+						<title>Geochemical and Geophysical Characteristics of the Conterminous United States</title>
+						<edition>Geochemical and Geophysical Characteristics of the Conterminous United States</edition>
+						<pubdate>2014-07-23</pubdate>
+						<pubinfo>
+							<publish>USGS</publish>
+							<pubplace>Reston, Virginia</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>U.S. Geological Survey Open-File Report</sername>
+						</serinfo>
+						<onlink>https://www.sciencebase.gov/catalog/item/53481333e4b06f6ce034aae7</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>NHDPlus</srccitea>
+				<srccontr>Framework</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2014</begdate>
+							<enddate>present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>
+				<srccite>
+					<citeinfo>
+						<origin>United States Geological Survey (USGS) and US EPA</origin>
+						<title>National Hydrography Dataset Plus</title>
+						<edition>Version 2.1</edition>
+						<pubdate>2012</pubdate>
+						<pubinfo>
+							<publish>USGS</publish>
+							<pubplace>Reston, VA</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>NHDPlusV2</sername>
+							<issue>Version2.1</issue>
+						</serinfo>
+						<onlink>http://www.horizon-systems.com/NHDPlus/NHDPlusV2_data.php</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+		</lineage>
+	</dataqual>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>GeoChemPhys1</enttypl>
+				<enttypd>This table represents the percentage of lithological aluminum oxide, calcium oxide, ferric oxide, potassium oxide, magnesium oxide, sodium oxide, phosphorus pentoxide, silicon dioxide, and sulfur content in surface or near surface geology, within individual, local NHDPlusV2 catchments and upstream, contributing watersheds.</enttypd>
+				<enttypds>USGS</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>COMID</attrlabl>
+				<attrdef>Unique ID label to each catchment in NHDPlusV2</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<udom>Unique Code</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatAreaSqKM</attrlabl>
+				<attrdef>Area of the catchment measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>65014.443</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatPctFull</attrlabl>
+				<attrdef>% of the catchment that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsAreaSqKM</attrlabl>
+				<attrdef>Area of the watershed measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>3133391.2218</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsPctFull</attrlabl>
+				<attrdef>% of the watershed that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Al2O3Cat</attrlabl>
+				<attrdef>Lithological aluminum oxide content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.160</rdommin>
+						<rdommax>27.689</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CaOCat</attrlabl>
+				<attrdef>Lithological calcium oxide content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.079</rdommin>
+						<rdommax>53.4</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Fe2O3Cat</attrlabl>
+				<attrdef>Lithological ferric oxide content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.149</rdommin>
+						<rdommax>46.35</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>K2OCat</attrlabl>
+				<attrdef>Lithological potassium oxide content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.0185</rdommin>
+						<rdommax>12.0</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>MgOCat</attrlabl>
+				<attrdef>Lithological magnesium oxide content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.100</rdommin>
+						<rdommax>36.795</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Na2OCat</attrlabl>
+				<attrdef>Lithological sodium oxide content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.0305</rdommin>
+						<rdommax>8.481</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>P2O5Cat</attrlabl>
+				<attrdef>Lithological phosphorus pentoxide content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.009</rdommin>
+						<rdommax>4.8045</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SCat</attrlabl>
+				<attrdef>Lithological sulfur content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.0005</rdommin>
+						<rdommax>54.4905</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SiO2Cat</attrlabl>
+				<attrdef>Lithological silicon dioxide content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>1.25</rdommin>
+						<rdommax>90.5</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Al2O3Ws</attrlabl>
+				<attrdef>Lithological aluminum oxide content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.160</rdommin>
+						<rdommax>27.4635</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CaOWs</attrlabl>
+				<attrdef>Lithological calcium oxide content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.27</rdommin>
+						<rdommax>53.40</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Fe2O3Ws</attrlabl>
+				<attrdef>Lithological ferric oxide content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.1494</rdommin>
+						<rdommax>46.35</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>K2OWs</attrlabl>
+				<attrdef>Lithological potassium oxide content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.0323</rdommin>
+						<rdommax>12.0</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>MgOWs</attrlabl>
+				<attrdef>Lithological magnesium oxide content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.10</rdommin>
+						<rdommax>36.7947</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Na2OWs</attrlabl>
+				<attrdef>Lithological sodium oxide content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.0305</rdommin>
+						<rdommax>8.482</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>P2O5Ws</attrlabl>
+				<attrdef>Lithological phosphorus pentoxide content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.010</rdommin>
+						<rdommax>4.8045</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>  
+			<attr>
+				<attrlabl>SWs</attrlabl>
+				<attrdef>Lithological sulfur content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0005</rdommin>
+						<rdommax>54.4905</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SiO2Ws</attrlabl>
+				<attrdef>Lithological silicon dioxide content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>1.25</rdommin>
+						<rdommax>90.4176</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>            
+		</detailed>
+		<detailed>
+			<enttyp>
+				<enttypl>GeoChemPhys2</enttypl>
+				<enttypd>This table represents the percentage of lithological nitrogen (N) content in surface or near surface geology, within individual, local NHDPlusV2 catchments and upstream, contributing watersheds.</enttypd>
+				<enttypds>USGS</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>COMID</attrlabl>
+				<attrdef>Unique ID label to each catchment in NHDPlusV2</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<udom>Unique Code</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatAreaSqKM</attrlabl>
+				<attrdef>Area of the catchment measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>65014.443</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatPctFull</attrlabl>
+				<attrdef>% of the catchment that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsAreaSqKM</attrlabl>
+				<attrdef>Area of the watershed measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>3133391.2218</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsPctFull</attrlabl>
+				<attrdef>% of the watershed that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>NCat</attrlabl>
+				<attrdef>Lithological nitrogen content in surface or near surface geology, expressed as a percentage within the local catchment(Cat).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.000005</rdommin>
+						<rdommax>1.94</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>NWs</attrlabl>
+				<attrdef>Lithological nitrogen content in surface or near surface geology, expressed as a percentage within the total upstream watershed(Ws).(%)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.0000023</rdommin>
+						<rdommax>1.94</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+		</detailed>
+		<detailed>
+			<enttyp>
+				<enttypl>GeoChemPhys3</enttypl>
+				<enttypd>This table represents the hydraulic conductivity (in micrometers per second) of surface or near surface geology, within individual, local NHDPlusV2 catchments and upstream, contributing watersheds.
+                </enttypd>
+				<enttypds>USGS</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>COMID</attrlabl>
+				<attrdef>Unique ID label to each catchment in NHDPlusV2</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<udom>Unique Code</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatAreaSqKM</attrlabl>
+				<attrdef>Area of the catchment measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>65014.443</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatPctFull</attrlabl>
+				<attrdef>% of the catchment that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsAreaSqKM</attrlabl>
+				<attrdef>Area of the watershed measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>3133391.2218</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsPctFull</attrlabl>
+				<attrdef>% of the watershed that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>HydrlCondCat</attrlabl>
+				<attrdef>Hydraulic conductivity (in micrometers per second) of surface or near surface geology, within the local catchment(Cat).(µm/s)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.000004</rdommin>
+						<rdommax>484.4372</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>HydrlCondWs</attrlabl>
+				<attrdef>Hydraulic conductivity (in micrometers per second) of surface or near surface geology, within the total upstream watershed(Ws).(µm/s)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.000004</rdommin>
+						<rdommax>484.4372</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+		</detailed>
+		<detailed>
+			<enttyp>
+				<enttypl>GeoChemPhys4</enttypl>
+				<enttypd>This table represents the compressive strength, measured as uniaxial compressive strength (in megaPascals, MPa) of surface or near surface geology, within individual, local NHDPlusV2 catchments and upstream, contributing watersheds.</enttypd>
+				<enttypds>USGS</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>COMID</attrlabl>
+				<attrdef>Unique ID label to each catchment in NHDPlusV2</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<udom>Unique Code</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatAreaSqKM</attrlabl>
+				<attrdef>Area of the catchment measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>65014.443</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatPctFull</attrlabl>
+				<attrdef>% of the catchment that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsAreaSqKM</attrlabl>
+				<attrdef>Area of the watershed measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>3133391.2218</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsPctFull</attrlabl>
+				<attrdef>% of the watershed that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CompStrgthCat</attrlabl>
+				<attrdef>Compressive strength, measured as uniaxial compressive strength (in megaPascals) of surface or near surface geology, within the local catchment(Cat).(MPa)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.0275</rdommin>
+						<rdommax>257.333</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CompStrgthWs</attrlabl>
+				<attrdef>Compressive strength, measured as uniaxial compressive strength (in megaPascals) of surface or near surface geology, within the total upstream watershed(Ws).(MPa)</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0.0275</rdommin>
+						<rdommax>256.976</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Applications</resdesc>
+		<distliab>https://edg.epa.gov/EPA_Data_License.html</distliab>
+		<distrib>
+			<cntinfo>
+				<cntperp>
+					<cntorg>US Environmental Protection Agency, Office of Research and Development, National Health and Environmental Effects Research Laboratory (NHEERL)</cntorg>
+					<cntper>Marc Weber</cntper>
+				</cntperp>
+				<cntpos>GIS Analyst</cntpos>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>200 S.W. 35th Street</address>
+					<city>Corvallis</city>
+					<state>OR</state>
+					<postal>97333</postal>
+				</cntaddr>
+				<cntvoice>(541) 754-4469</cntvoice>
+				<cntemail>weber.marc@epa.gov</cntemail>
+				<cntinst>http://www.epa.gov/nheerl/</cntinst>
+			</cntinfo>
+		</distrib>
+	</distinfo>
+	<metainfo>
+		<metd>20150423</metd>
+		<metfrd>20190423</metfrd>
+		<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<metc>
+			<cntinfo>
+				<cntperp>
+					<cntorg>US Environmental Protection Agency, Office of Research and Development, National Health and Environmental Effects Research Laboratory (NHEERL)</cntorg>
+					<cntper>Marc Weber</cntper>
+				</cntperp>
+				<cntpos>GIS Analyst</cntpos>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>200 S.W. 35th Street</address>
+					<city>Corvallis</city>
+					<state>OR</state>
+					<postal>97333</postal>
+				</cntaddr>
+				<cntvoice>(541) 754-4469</cntvoice>
+				<cntemail>weber.marc@epa.gov</cntemail>
+				<cntinst>http://www.epa.gov/nheerl/</cntinst>
+			</cntinfo>
+		</metc>
+	</metainfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>USA Contiguous Albers Equal Area Conic USGS version</mapprojn>
+					<albers>
+						<stdparll>29.5</stdparll>
+						<stdparll>45.5</stdparll>
+						<longcm>-96.0</longcm>
+						<latprjo>23.0</latprjo>
+						<feast>0.0</feast>
+						<fnorth>0.0</fnorth>
+					</albers>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.000001</absres>
+						<ordres>0.000001</ordres>
+					</coordrep>
+					<plandu>meters</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>North American Datum of 1983</horizdn>
+				<ellips>Geodetic Reference System 1980</ellips>
+				<semiaxis>6378137.000000</semiaxis>
+				<denflat>298.257222</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+</metadata>

@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>US Environmental Protection Agency</origin>
+				<title>The StreamCat Dataset: Accumulated Attributes for NHDPlusV2 Catchments (Version 2.1) for the Conterminous United States: Potential Unit Grazing</title>
+				<pubinfo>
+					<publish>US EPA Office of Research &amp; Development (ORD) - National Health and Environmental Effects Research Laboratory (NHEERL) </publish>
+					<pubplace>Corvallis, OR</pubplace>
+				</pubinfo>
+				<pubdate>2015</pubdate>
+				<onlink>http://www.epa.gov/nheerl/arm/</onlink>
+				<onlink>http://edg.epa.gov</onlink>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>This dataset represents the potential unit grazing within individual, local NHDPlusV2 catchments and upstream, contributing watersheds. Attributes of the landscape layer were calculated for every local NHDPlusV2 catchment and accumulated to provide watershed-level metrics. (See Supplementary Info for Glossary of Terms) 
+			
+			The Potential Unit Grazing (PUG) factor evaluates the potential consequences of cattle grazing on water quality. For a description of the process used to create the developed raster used for the production of these tables see: file:///L:/Priv/CORFiles/Geospatial_Library/Data/Project/SSWR1.1B/grazing/GrazingReadMe.html
+			
+			The potential unit grazing was summarized by local catchment and by watershed to produce local catchment-level and watershed-level metrics as a continuous data type (see Data Structure and Attribute Information for a description). 
+			</abstract>
+			<purpose>These data were created in support of the US EPA’s National Aquatic Resource Survey (NARS) and Safe and Sustainable Waters Resources (SSWR) Programs. However, these watershed summaries of landscape data should have broad applicability for hydrological, geomorphic, or ecological modeling, management, and restoration. For details on EPA NARS and SSWR Programs see http://water.epa.gov/type/watersheds/monitoring/aquaticsurvey_index.cfm and http://www.epa.gov/research/progressreport/water.htm</purpose>
+			<supplinf>All code and scripts used to produce these data were written in the python or R programming languages and are freely available at ftp://newftp.epa.gov/EPADataCommons/ORD/NHDPlusLandscapeAttributes/StreamCat/Documentation/Code/  
+			
+			Glossary of Terms
+			
+			Stream Segment: NHDPlusV2 line describing a section of contiguous stream or river between upstream and downstream tributaries (as depicted in USGS topographic quadrangles), except where the segment is a headwater or terminal stream .  
+			
+			Catchment (Cat):  The portion of the landscape where surface flow drains directly to an NHDPlusV2 stream segment, excluding any upstream contributions. 
+			
+			Watershed (Ws): The set of hydrologically-connected catchments, consisting of all upstream catchments that contribute flow to any local catchment. 
+			
+			COMID: Unique identifier for each stream segment, and associated catchment, in NHDPlusV2.  Watershed metrics describe entire area of all catchments that accumulate to the specific catchment based on the NHD PlusFlow table.
+
+			Riparian Buffer (RipBuf): Spatial buffer of 100-m that was added to NHDPlusV2 stream network and NLCD water pixels. The buffers were used to spatially constrain calculations for some landscape metrics to within 100 meters of the riparian area.
+				
+			Landscape Layer: Any geospatial layer from which we derived statistical summaries for both local catchments and watersheds. These landscape layers were comprised of several GIS formats, including vector (points, lines, or polygons) and raster.</supplinf>
+		</descript>
+		<timeperd>
+			<current>Publication date</current>
+			<timeinfo>
+				<sngdate>
+					<caldate>20150423</caldate>
+				</sngdate>
+			</timeinfo>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-125</westbc>
+				<eastbc>-66.5</eastbc>
+				<northbc>49.5</northbc>
+				<southbc>24.5</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>ISO 19115 Topic Category</themekt>
+				<themekey>inlandWaters</themekey>
+			</theme>
+			<theme>
+				<themekt>EPA GIS Keyword Thesaurus</themekt>
+				<themekey>Ecosystem</themekey>
+				<themekey>Environment</themekey>
+				<themekey>Monitoring</themekey>
+				<themekey>Natural Resources</themekey>
+				<themekey>Surface Water</themekey>
+				<themekey>Modeling</themekey>
+			</theme>
+			<place>
+				<placekt>none</placekt>
+				<placekey>United States of America</placekey>
+				<placekey>United States</placekey>
+				<placekey>USA</placekey>
+				<placekey>Alabama</placekey>
+				<placekey>Arizona</placekey>
+				<placekey>Arkansas</placekey>
+				<placekey>California</placekey>
+				<placekey>Colorado</placekey>
+				<placekey>Connecticut</placekey>
+				<placekey>Delaware</placekey>
+				<placekey>District of Columbia</placekey>
+				<placekey>Florida</placekey>
+				<placekey>Georgia</placekey>
+				<placekey>Idaho</placekey>
+				<placekey>Illinois</placekey>
+				<placekey>Indiana</placekey>
+				<placekey>Iowa</placekey>
+				<placekey>Kansas</placekey>
+				<placekey>Kentucky</placekey>
+				<placekey>Louisiana</placekey>
+				<placekey>Maine</placekey>
+				<placekey>Maryland</placekey>
+				<placekey>Massachusetts</placekey>
+				<placekey>Michigan</placekey>
+				<placekey>Minnesota</placekey>
+				<placekey>Mississippi</placekey>
+				<placekey>Missouri</placekey>
+				<placekey>Montana</placekey>
+				<placekey>Nebraska</placekey>
+				<placekey>Nevada</placekey>
+				<placekey>New Hampshire</placekey>
+				<placekey>New Jersey</placekey>
+				<placekey>New Mexico</placekey>
+				<placekey>New York</placekey>
+				<placekey>North Carolina</placekey>
+				<placekey>North Dakota</placekey>
+				<placekey>Ohio</placekey>
+				<placekey>Oklahoma</placekey>
+				<placekey>Oregon</placekey>
+				<placekey>Pennsylvania</placekey>
+				<placekey>Rhode Island</placekey>
+				<placekey>South Carolina</placekey>
+				<placekey>South Dakota</placekey>
+				<placekey>Tennessee</placekey>
+				<placekey>Texas</placekey>
+				<placekey>Utah</placekey>
+				<placekey>Vermont</placekey>
+				<placekey>Virginia</placekey>
+				<placekey>Washington</placekey>
+				<placekey>West Virginia</placekey>
+				<placekey>Wisconsin</placekey>
+				<placekey>Wyoming</placekey>
+			</place>
+			<place>
+				<placekt>None</placekt>
+			</place>
+			<theme>
+				<themekt>User</themekt>
+			</theme>
+		</keywords>
+		<accconst>None.</accconst>
+		<useconst>None.  While EPA has used its best efforts to include complete and accurate information in the EME, EPA cannot be held responsible for errors or omissions and is not liable for any direct, indirect or consequential damages resulting from using this information. Reliance on the information contained in this system by any party cannot be used as a defense in any administrative or judicial proceeding. In such proceedings, the specific language of the relevant regulation or statute is binding. Acknowledgement of the EPA would be appreciated.</useconst>
+		<secinfo>
+			<secsys>FIPS Pub 199</secsys>
+			<secclass>public</secclass>
+			<sechandl>Standard Technical Controls</sechandl>
+		</secinfo>
+	</idinfo>
+	<dataqual>
+		<logic>Not Applicable</logic>
+		<complete>Not Applicable</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Not Applicable</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdate>2014</procdate>
+				<procdesc>Datasets downloaded from http://gapanalysis.usgs.gov/PADUS/ , http://www.mrlc.gov/nlcd06_data.php , http://www.horizon-systems.com/NHDPlus/NHDPlusV2_data.php Data source, date, units and resolution were recorded in a project tracking spreadsheet and verified. ftp://newftp.epa.gov/EPADataCommons/ORD/NHDPlusLandscapeAttributes/StreamCat/Documentation/DataDictionary.html
+				</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2014</procdate>
+				<procdesc>Projection of dataset verified as USGS Albers Equal Area Conic and projected if necessary</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2014</procdate>
+				<procdesc>Performed a visual inspection of dataset for gaps, edges other anomalous features. Verified how no-data values were represented and recoded values as no-data where appropriate (for instance, if no-data locations represented by 0's or -9999, these were converted to no-data values).</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2014</procdate>
+				<procdesc>Ran zonal statistics python script to calculate zonal statistics for all NHDPlusV2 catchments in each NHDPlusV2 Vector Processing Unit (VPU). Used the VPU catchment grid as a the snap raster in processing and set the processing resolution at 30 meters. The ArcGIS spatial analyst tool-Zonal Statistics As Table was used to summarize statistics.</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2014</procdate>
+				<procdesc>Ran R zonal statistics processing script to clean and standardize results of zonal statistics table for catchment-level data and for use in accumulation script / process. Clean up consisted of calculating the percent of each catchment that had coverage by a given landscape raster (i.e. was not null), renaming and sorting zonal statistics fields, and writing zonal results to .csv file.</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2014</procdate>
+				<procdesc>Ran python accumulation script for each NHDPlusV2 VPU - script uses NHDPlusV2 flow table to gather upstream catchment zonal statistics results or area tabulation results and generates output csv file with the local catchment zonal statistics or tabulation result and area weighted upstream catchments' zonal statistics or tabulation results for every NHDPlusV2 catchment in CONUS. Zonal statistics are expressed as the area of each class in each catchment as well as the watershed area for each catchment, while tabulation is expressed as the area of each category in each catchment as well as the area in each category for the watershed. </procdesc>
+			</procstep>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>PADUS</srccitea>
+				<srccontr>vector digital data</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2014</begdate>
+							<enddate>present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>				
+				<srccite>
+					<citeinfo>
+						<origin>U.S. Geological Survey (USGS) Gap Analysis Program (GAP)</origin>
+						<title>Protected Areas Database of the United States (PADUS) version 1.3</title>
+						<edition>1.3</edition>
+						<pubdate>20121130</pubdate>
+						<pubinfo>
+							<publish>USDA</publish>
+							<pubplace>Bethesda, Maryland</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>PADUS</sername>
+							<issue>1.3</issue>
+						</serinfo>
+						<onlink>http://gapanalysis.usgs.gov/PADUS/</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>National Elevation Dataset</srccitea>
+				<srccontr>Raster</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2014</begdate>
+							<enddate>present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>				
+				<srccite>
+					<citeinfo>
+						<origin>U.S. Geological Survey (USGS), Denver</origin>
+						<title>National Elevation Dataset (NED)</title>
+						<edition>NHDPlusV2</edition>
+						<pubdate>2011</pubdate>
+						<pubinfo>
+							<publish>USDA</publish>
+							<pubplace>Bethesda, Maryland</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>elev_cm</sername>
+							<issue>grids</issue>
+						</serinfo>
+						<onlink>http://ned.usgs.gov/</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>NLCD</srccitea>
+				<srccontr>Land Use</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2006</begdate>
+							<enddate>Present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>
+				<srccite>
+					<citeinfo>
+						<origin>Multi-Resolution Land Characteristics Consortium (MRLC)</origin>
+						<title>National Land Cover Database (NLCD)</title>
+						<edition>2006</edition>
+						<pubdate>2011</pubdate>
+						<pubinfo>
+							<publish>Fry, J., Xian, G., Jin, S., Dewitz, J., Homer, C., Yang, L., Barnes, C., Herold, N., and Wickham, J.</publish>
+							<pubplace>Sioux Falls, SD</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>NLCD</sername>
+							<issue>2006</issue>
+						</serinfo>
+						<onlink>http://www.mrlc.gov/nlcd06_data.php</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>NHDPlus</srccitea>
+				<srccontr>Framework</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2014</begdate>
+							<enddate>present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>
+				<srccite>
+					<citeinfo>
+						<origin>United States Geological Survey (USGS) and US EPA</origin>
+						<title>National Hydrography Dataset Plus</title>
+						<edition>Version 2.1</edition>
+						<pubdate>2012</pubdate>
+						<pubinfo>
+							<publish>USGS</publish>
+							<pubplace>Reston, VA</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>NHDPlusV2</sername>
+							<issue>Version2.1</issue>
+						</serinfo>
+						<onlink>http://www.horizon-systems.com/NHDPlus/NHDPlusV2_data.php</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+		</lineage>
+	</dataqual>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>Grazing</enttypl>
+				<enttypd>The potential unit grazing within the local catchment (Cat) and accumulated watershed (Ws).</enttypd>
+				<enttypds>EPA</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>COMID</attrlabl>
+				<attrdef>Unique ID label to each catchment in NHDPlusV2</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<udom>Unique Code</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatAreaSqKM</attrlabl>
+				<attrdef>Area of the catchment measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>65014.443</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatPctFull</attrlabl>
+				<attrdef>% of the catchment that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsAreaSqKM</attrlabl>
+				<attrdef>Area of the watershed measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>3133391.2218</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsPctFull</attrlabl>
+				<attrdef>% of the watershed that is covered by the landscape layer.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>????Cat</attrlabl>
+				<attrdef>The potential unit grazing within the local catchment (NHDPlusV2).</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>82916.9279982883</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>????Ws</attrlabl>
+				<attrdef>The potential unit grazing within the total upstream watershed (NHDPlusV2).</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>33749.7399940767</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Applications</resdesc>
+		<distliab>https://edg.epa.gov/EPA_Data_License.html</distliab>
+		<distrib>
+			<cntinfo>
+				<cntperp>
+					<cntorg>US Environmental Protection Agency, Office of Research and Development, National Health and Environmental Effects Research Laboratory (NHEERL)</cntorg>
+					<cntper>Marc Weber</cntper>
+				</cntperp>
+				<cntpos>GIS Analyst</cntpos>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>200 S.W. 35th Street</address>
+					<city>Corvallis</city>
+					<state>OR</state>
+					<postal>97333</postal>
+				</cntaddr>
+				<cntvoice>(541) 754-4469</cntvoice>
+				<cntemail>weber.marc@epa.gov</cntemail>
+				<cntinst>http://www.epa.gov/nheerl/</cntinst>
+			</cntinfo>
+		</distrib>
+	</distinfo>
+	<metainfo>
+		<metd>20150423</metd>
+		<metfrd>20190423</metfrd>
+		<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<metc>
+			<cntinfo>
+				<cntperp>
+					<cntorg>US Environmental Protection Agency, Office of Research and Development, National Health and Environmental Effects Research Laboratory (NHEERL)</cntorg>
+					<cntper>Marc Weber</cntper>
+				</cntperp>
+				<cntpos>GIS Analyst</cntpos>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>200 S.W. 35th Street</address>
+					<city>Corvallis</city>
+					<state>OR</state>
+					<postal>97333</postal>
+				</cntaddr>
+				<cntvoice>(541) 754-4469</cntvoice>
+				<cntemail>weber.marc@epa.gov</cntemail>
+				<cntinst>http://www.epa.gov/nheerl/</cntinst>
+			</cntinfo>
+		</metc>
+	</metainfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>USA Contiguous Albers Equal Area Conic USGS version</mapprojn>
+					<albers>
+						<stdparll>29.5</stdparll>
+						<stdparll>45.5</stdparll>
+						<longcm>-96.0</longcm>
+						<latprjo>23.0</latprjo>
+						<feast>0.0</feast>
+						<fnorth>0.0</fnorth>
+					</albers>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.000001</absres>
+						<ordres>0.000001</ordres>
+					</coordrep>
+					<plandu>meters</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>North American Datum of 1983</horizdn>
+				<ellips>Geodetic Reference System 1980</ellips>
+				<semiaxis>6378137.000000</semiaxis>
+				<denflat>298.257222</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+</metadata>

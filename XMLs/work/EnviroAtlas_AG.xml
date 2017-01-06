@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>US Environmental Protection Agency</origin>
+				<title>The StreamCat Dataset: Accumulated Attributes for NHDPlusV2 Catchments (Version 2.1) for the Conterminous United States: EnviroAtlas Nitrogen Inputs to Agricultural Lands</title>
+				<pubinfo>
+					<publish>US EPA Office of Research &amp; Development (ORD) - National Health and Environmental Effects Research Laboratory (NHEERL) </publish>
+					<pubplace>Corvallis, OR</pubplace>
+				</pubinfo>
+				<pubdate>2015</pubdate>
+				<onlink>ftp://newftp.epa.gov/EPADataCommons/ORD/StreamCat/</onlink>
+				<onlink>http://edg.epa.gov</onlink>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>This dataset represents the application of nitrogen to  agricultural land within individual local NHDPlusV2 catchments and upstream, contributing watersheds based on the EnviroAtlas (See Supplementary Info for Glossary of Terms).
+
+			These data are based on county-scale estimates of N in the form of fertilizer, manure, or cultivated biological nitrogen fixation. The rasters used for this analysis were prepared by EnviroAtlas but not distributed. Each raster applies nitrogen application values to only the areas that the NLCD classifies as agricultural (classes 81 &amp; 82) based on county-scale values. Links to data in each raster can be found in Data Sources below.
+
+			The nitrogen characteristics (kg N/ha/yr) were summarized to produce local catchment-level and watershed-level metrics as a continuous data type (see Data Structure and Attribute Information for a description).
+			</abstract>
+			<purpose>These data were created in support of the US EPA’s National Aquatic Resource Survey (NARS) and Safe and Sustainable Waters Resources (SSWR) Programs. However, these watershed summaries of landscape data have broad applicability for hydrological, geomorphic, or ecological modeling, management, and restoration. For details on EPA NARS and SSWR Programs see http://water.epa.gov/type/watersheds/monitoring/aquaticsurvey_index.cfm and http://www.epa.gov/research/progressreport/water.htm
+
+			</purpose>
+
+			<supplinf>All code and scripts used to produce these data were written in the python or R programming languages and are freely available at: ftp://newftp.epa.gov/EPADataCommons/ORD/NHDPlusLandscapeAttributes/StreamCat/Documentation/Code/ or https://github.com/USEPA/StreamCat
+
+			Glossary of Terms
+
+			Stream Segment: NHD line describing a section of contiguous stream or river between upstream and downstream tributaries (as depicted in USGS topographic quadrangles), except where the segment is a headwater or terminal stream (e.g., an outlet to the ocean).
+
+			Catchment (Cat):  The portion of the landscape where surface flow drains directly to an NHD stream segment, excluding any upstream contributions.
+
+			Watershed (Ws): The set of hydrologically-connected catchments, consisting of all upstream catchments that contribute flow to any local catchment.
+
+			COMID: Unique identifier for each stream segment, and associated catchment, in NHDPlusV2.  Watershed metrics describe entire area of all catchments that accumulate to the specific catchment based on the NHD PlusFlow table.
+
+			Riparian Buffer (RipBuf): Spatial buffer of 100-m that was added to NHDPlusV2 stream network and NLCD water pixels. The buffers were used to spatially constrain calculations for some landscape metrics to within 100 meters of the riparian area.
+
+			Landscape Layer: Any geospatial layer from which we derived statistical summaries for both local catchments and watersheds. These landscape layers were comprised of several GIS formats, including vector (points, lines, or polygons) and raster.</supplinf>
+		</descript>
+		<timeperd>
+			<current>Publication date</current>
+			<timeinfo>
+				<sngdate>
+					<caldate>20150423</caldate>
+				</sngdate>
+			</timeinfo>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-125</westbc>
+				<eastbc>-66.5</eastbc>
+				<northbc>49.5</northbc>
+				<southbc>24.5</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>ISO 19115 Topic Category</themekt>
+				<themekey>inlandWaters</themekey>
+			</theme>
+			<theme>
+				<themekt>EPA GIS Keyword Thesaurus</themekt>
+				<themekey>Ecosystem</themekey>
+				<themekey>Environment</themekey>
+				<themekey>Monitoring</themekey>
+				<themekey>Natural Resources</themekey>
+				<themekey>Surface Water</themekey>
+				<themekey>Modeling</themekey>
+			</theme>
+			<place>
+				<placekt>none</placekt>
+				<placekey>United States of America</placekey>
+				<placekey>United States</placekey>
+				<placekey>USA</placekey>
+				<placekey>Alabama</placekey>
+				<placekey>Arizona</placekey>
+				<placekey>Arkansas</placekey>
+				<placekey>California</placekey>
+				<placekey>Colorado</placekey>
+				<placekey>Connecticut</placekey>
+				<placekey>Delaware</placekey>
+				<placekey>District of Columbia</placekey>
+				<placekey>Florida</placekey>
+				<placekey>Georgia</placekey>
+				<placekey>Idaho</placekey>
+				<placekey>Illinois</placekey>
+				<placekey>Indiana</placekey>
+				<placekey>Iowa</placekey>
+				<placekey>Kansas</placekey>
+				<placekey>Kentucky</placekey>
+				<placekey>Louisiana</placekey>
+				<placekey>Maine</placekey>
+				<placekey>Maryland</placekey>
+				<placekey>Massachusetts</placekey>
+				<placekey>Michigan</placekey>
+				<placekey>Minnesota</placekey>
+				<placekey>Mississippi</placekey>
+				<placekey>Missouri</placekey>
+				<placekey>Montana</placekey>
+				<placekey>Nebraska</placekey>
+				<placekey>Nevada</placekey>
+				<placekey>New Hampshire</placekey>
+				<placekey>New Jersey</placekey>
+				<placekey>New Mexico</placekey>
+				<placekey>New York</placekey>
+				<placekey>North Carolina</placekey>
+				<placekey>North Dakota</placekey>
+				<placekey>Ohio</placekey>
+				<placekey>Oklahoma</placekey>
+				<placekey>Oregon</placekey>
+				<placekey>Pennsylvania</placekey>
+				<placekey>Rhode Island</placekey>
+				<placekey>South Carolina</placekey>
+				<placekey>South Dakota</placekey>
+				<placekey>Tennessee</placekey>
+				<placekey>Texas</placekey>
+				<placekey>Utah</placekey>
+				<placekey>Vermont</placekey>
+				<placekey>Virginia</placekey>
+				<placekey>Washington</placekey>
+				<placekey>West Virginia</placekey>
+				<placekey>Wisconsin</placekey>
+				<placekey>Wyoming</placekey>
+			</place>
+		</keywords>
+		<accconst>None.</accconst>
+		<useconst>None.  While EPA has used its best efforts to include complete and accurate information in the EME, EPA cannot be held responsible for errors or omissions and is not liable for any direct, indirect or consequential damages resulting from using this information. Reliance on the information contained in this system by any party cannot be used as a defense in any administrative or judicial proceeding. In such proceedings, the specific language of the relevant regulation or statute is binding. Acknowledgement of the EPA would be appreciated.</useconst>
+		<secinfo>
+			<secsys>FIPS Pub 199</secsys>
+			<secclass>public</secclass>
+			<sechandl>Standard Technical Controls</sechandl>
+		</secinfo>
+	</idinfo>
+	<dataqual>
+		<logic>Not Applicable</logic>
+		<complete>Not Applicable</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Not Applicable</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Dataset downloaded from https://edg.epa.gov/data/Public/ORD/EnviroAtlas/ Data source, date, units and resolution were recorded in a project tracking spreadsheet and verified.				ftp://newftp.epa.gov/EPADataCommons/ORD/NHDPlusLandscapeAttributes/StreamCat/Documentation/DataDictionary.html
+				</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Projection of dataset verified as USGS Albers Equal Area Conic and projected if necessary</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Performed a visual inspection of dataset for gaps, edges other anomalous features. Verified how no-data values were represented and recoded values as no-data where appropriate (for instance, if no-data locations represented by 0's or -9999, these were converted to no-data values). Data manipulation documented in Pre-Processing script (StreamCat_PreProcessing.py)</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Ran zonal statistics python script (StreamCat.py) to calculate zonal statistics for all NHDPlusV2 catchments in each NHDPlusV2 Vector Processing Unit (VPU). Zonal statistics were perofrmed using either ZonalStatisticsAsTable, TabulateArea, or spatially joining vector point data to catchments. Each method applies to the type of landscape layer being evaluated, Continuous, Categorical, or Point. We also calculated the percent of each catchment that had coverage by a given landscape layer (i.e. was not null). These results are accumulated using the NHDPlusV2 flow table to summarize upstream catchment values and complete watershed values for the metric.</procdesc>
+			</procstep>
+			<procstep>
+				<procdate>2015</procdate>
+				<procdesc>Clean and standardize results of zonal statistics table from accumulation script / process using makeFinalTables.py. Clean up consisted of calculating mean value of metric per zone, renaming and sorting zonal statistics fields, and writing zonal results to .csv file.</procdesc>
+			</procstep>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>EnviroAtlas</srccitea>
+				<srccontr>Mean livestock manure application to cultivated crop and hay/pasture lands.</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2015</begdate>
+							<enddate>present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>
+				<srccite>
+					<citeinfo>
+						<origin>US Environmental Protection Agency (US EPA)</origin>
+						<title>EnviroAtlas - Manure application to agricultural lands from confined animal feeding operations by 12-digit HUC for the Conterminous United States, 2006</title>
+						<edition>2006</edition>
+						<pubdate>20130920</pubdate>
+						<pubinfo>
+							<publish>U.S. EPA Office of Research and Development (ORD) - National Exposure Research Laboratory (NERL)</publish>
+							<pubplace>Research Triangle Park, NC</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>manure06</sername>
+							<issue>2006</issue>
+						</serinfo>
+						<onlink>http://edg.epa.gov/data/Public/ORD/EnviroAtlas/National/</onlink>
+						<onlink>http://enviroatlas.epa.gov/EnviroAtlas/DataFactSheets/pdf/ESN/ManureApplication.pdf</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>EnviroAtlas</srccitea>
+				<srccontr>Mean synthetic nitrogen (N) fertilizer application to cultivated crop and hay/pasture lands.</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2014</begdate>
+							<enddate>present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>
+				<srccite>
+					<citeinfo>
+						<origin>US Environmental Protection Agency (US EPA)</origin>
+						<title>EnviroAtlas - Synthetic N fertilizer application to agricultural lands by 12-digit HUC in the Conterminous United States, 2006</title>
+						<edition>2006</edition>
+						<pubdate>20130920</pubdate>
+						<pubinfo>
+							<publish>U.S. EPA Office of Research and Development (ORD) - National Exposure Research Laboratory (NERL)</publish>
+							<pubplace>Research Triangle Park, NC</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>fertilizer06</sername>
+							<issue>2006</issue>
+						</serinfo>
+						<onlink>http://edg.epa.gov/data/Public/ORD/EnviroAtlas/National/</onlink>
+						<onlink>http://enviroatlas.epa.gov/EnviroAtlas/DataFactSheets/pdf/ESN/SyntheticNitrogenFertilizerApplication.pdf</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>EnviroAtlas</srccitea>
+				<srccontr>Mean cultivated biological nitrogen fixation (C-BNF) in cultivated crop and hay/pasture lands .</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2014</begdate>
+							<enddate>present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>
+				<srccite>
+					<citeinfo>
+						<origin>US Environmental Protection Agency (US EPA)</origin>
+						<title>EnviroAtlas - Cultivated biological nitrogen fixation in agricultural lands by 12-digit HUC in the Conterminous United States, 2006</title>
+						<edition>2006</edition>
+						<pubdate>20130920</pubdate>
+						<pubinfo>
+							<publish>U.S. EPA Office of Research and Development (ORD) - National Exposure Research Laboratory (NERL)</publish>
+							<pubplace>Research Triangle Park, NC</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>cbnf06</sername>
+							<issue>2006</issue>
+						</serinfo>
+						<onlink>http://edg.epa.gov/data/Public/ORD/EnviroAtlas/National/</onlink>
+						<onlink>http://enviroatlas.epa.gov/enviroatlas/Datafactsheets/pdf/ESN/CultivatedBiologicalNitrogenFixation.pdf</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+			<srcinfo>
+				<typesrc>online</typesrc>
+				<srccitea>NHDPlus</srccitea>
+				<srccontr>Framework</srccontr>
+				<srctime>
+					<srccurr>publication date</srccurr>
+					<timeinfo>
+						<rngdates>
+							<begdate>2014</begdate>
+							<enddate>present</enddate>
+						</rngdates>
+					</timeinfo>
+				</srctime>
+				<srccite>
+					<citeinfo>
+						<origin>United States Geological Survey (USGS) and US EPA</origin>
+						<title>National Hydrography Dataset Plus</title>
+						<edition>Version 2.1</edition>
+						<pubdate>2012</pubdate>
+						<pubinfo>
+							<publish>USGS</publish>
+							<pubplace>Reston, VA</pubplace>
+						</pubinfo>
+						<serinfo>
+							<sername>NHDPlus</sername>
+							<issue>Version2.1</issue>
+						</serinfo>
+						<onlink>http://www.horizon-systems.com/NHDPlus/NHDPlusV2_data.php</onlink>
+					</citeinfo>
+				</srccite>
+			</srcinfo>
+		</lineage>
+	</dataqual>
+	<eainfo>
+		<detailed>
+			<enttyp>
+				<enttypl>EnviroAtlas</enttypl>
+				<enttypd>Applications of nitrogen to  agricultural land</enttypd>
+				<enttypds>EnviroAtlas</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>COMID</attrlabl>
+				<attrdef>Unique ID label to each catchment in NHDPlusV2</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<udom>Unique Code</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatAreaSqKM</attrlabl>
+				<attrdef>Area of local catchment measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>65014.443</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CatPctFull</attrlabl>
+				<attrdef>% of the catchment that is covered by the landscape raster.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsAreaSqKM</attrlabl>
+				<attrdef>Area of the local catchment and accumulated upstream catchments composing the entire watershed (Ws) measured in square kilometers.</attrdef>
+				<attrdefs>NHDPlusV2</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>.0009</rdommin>
+						<rdommax>3133391.2218</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>WsPctFull</attrlabl>
+				<attrdef>% of the watershed that is covered by the landscape raster.</attrdef>
+				<attrdefs>EPA</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>100</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FertCat</attrlabl>
+				<attrdef> Mean rate of synthetic nitrogen fertilizer application to agricultural land in kg N/ha/yr within the local catchment (Cat)</attrdef>
+				<attrdefs>EnviroAtlas</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>-845.038090707263</rdommin>
+						<rdommax>40958.2160287081</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>ManureCat</attrlabl>
+				<attrdef>  Mean rate of manure application to agricultural land from confined animal feeding operations in kg N/ha/yr within the local catchment (Cat)</attrdef>
+				<attrdefs>EnviroAtlas</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>0</rdommin>
+						<rdommax>477.3287</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CBNFCat</attrlabl>
+				<attrdef> Mean rate of biological nitrogen fixation from the cultivation of crops in kg N/ha/yr within the local catchment (Cat)</attrdef>
+				<attrdefs>EnviroAtlas</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>-845.038090707263</rdommin>
+						<rdommax>40958.2160287081</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FertWs</attrlabl>
+				<attrdef> Mean rate of synthetic nitrogen fertilizer application to agricultural land in kg N/ha/yr within the total upstream watershed (Ws)</attrdef>
+				<attrdefs>EnviroAtlas</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>-837.491471107747</rdommin>
+						<rdommax>40958.2160287081</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>ManureWs</attrlabl>
+				<attrdef> Mean rate of manure application to agricultural land from confined animal feeding operations in kg N/ha/yr within the total upstream watershed (Ws)</attrdef>
+				<attrdefs>EnviroAtlas</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>-837.491471107747</rdommin>
+						<rdommax>40958.2160287081</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CBNFWs</attrlabl>
+				<attrdef> Mean rate of biological nitrogen fixation from the cultivation of crops in kg N/ha/yr within the total upstream watershed (Ws)</attrdef>
+				<attrdefs>EnviroAtlas</attrdefs>
+				<attrdomv>
+					<rdom>
+						<rdommin>-837.491471107747</rdommin>
+						<rdommax>40958.2160287081</rdommax>
+					</rdom>
+				</attrdomv>
+			</attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Applications</resdesc>
+		<distliab>https://edg.epa.gov/EPA_Data_License.html</distliab>
+		<distrib>
+			<cntinfo>
+				<cntperp>
+					<cntorg>US Environmental Protection Agency, Office of Research and Development, National Health and Environmental Effects Research Laboratory (NHEERL)</cntorg>
+					<cntper>Marc Weber</cntper>
+				</cntperp>
+				<cntpos>GIS Analyst</cntpos>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>200 S.W. 35th Street</address>
+					<city>Corvallis</city>
+					<state>OR</state>
+					<postal>97333</postal>
+				</cntaddr>
+				<cntvoice>(541) 754-4469</cntvoice>
+				<cntemail>weber.marc@epa.gov</cntemail>
+				<cntinst>http://www.epa.gov/nheerl/</cntinst>
+			</cntinfo>
+		</distrib>
+	</distinfo>
+	<metainfo>
+		<metd>20150423</metd>
+		<metfrd>20190423</metfrd>
+		<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+		<metc>
+			<cntinfo>
+				<cntperp>
+					<cntorg>US Environmental Protection Agency, Office of Research and Development, National Health and Environmental Effects Research Laboratory (NHEERL)</cntorg>
+					<cntper>Marc Weber</cntper>
+				</cntperp>
+				<cntpos>GIS Analyst</cntpos>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<address>200 S.W. 35th Street</address>
+					<city>Corvallis</city>
+					<state>OR</state>
+					<postal>97333</postal>
+				</cntaddr>
+				<cntvoice>(541) 754-4469</cntvoice>
+				<cntemail>weber.marc@epa.gov</cntemail>
+				<cntinst>http://www.epa.gov/nheerl/</cntinst>
+			</cntinfo>
+		</metc>
+	</metainfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>USA Contiguous Albers Equal Area Conic USGS version</mapprojn>
+					<albers>
+						<stdparll>29.5</stdparll>
+						<stdparll>45.5</stdparll>
+						<longcm>-96.0</longcm>
+						<latprjo>23.0</latprjo>
+						<feast>0.0</feast>
+						<fnorth>0.0</fnorth>
+					</albers>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.000001</absres>
+						<ordres>0.000001</ordres>
+					</coordrep>
+					<plandu>meters</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>North American Datum of 1983</horizdn>
+				<ellips>Geodetic Reference System 1980</ellips>
+				<semiaxis>6378137.000000</semiaxis>
+				<denflat>298.257222</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+</metadata>
